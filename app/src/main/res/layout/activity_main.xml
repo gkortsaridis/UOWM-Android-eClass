@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#e3f2fd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/appbar" layout="@layout/app_bar" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/eclass" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/usernameEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/passwordEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:singleLine="true"
+                    android:password="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/rememberMeCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Remember me" />
+
+            <Button
+                android:id="@+id/loginBtn"
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log In"
+                android:onClick="login" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

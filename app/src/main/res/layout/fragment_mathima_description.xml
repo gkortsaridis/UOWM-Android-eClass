@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="20sp"
+        android:textColor="#212121"
+        android:id="@+id/kathigitisDescrTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Καθηγητής : " />
+
+    <View
+        android:background="#b6b6b6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:textSize="20sp"
+        android:textColor="#212121"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Περιγραφή Μαθήματος" />
+
+    <View
+        android:background="#b6b6b6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="45dp">
+
+        <TextView
+            android:id="@+id/mathimaDescriptionTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </ScrollView>
+</LinearLayout>

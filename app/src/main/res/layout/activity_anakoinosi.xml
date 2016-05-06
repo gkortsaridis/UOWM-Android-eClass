@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="?attr/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.support.v7.widget.CardView
+            android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                    android:id="@+id/anakoinosiLesson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lesson"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                    android:id="@+id/anakoinosiWhen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="When"
+                    android:layout_below="@+id/anakoinosiLesson"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="2dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <ScrollView
+                    android:id="@+id/scrollView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/anakoinosiText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

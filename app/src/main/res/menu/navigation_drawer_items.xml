@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:icon="@drawable/book" android:id="@+id/navItem1" android:title="Τα Μαθήματα μου" />
+        <item android:icon="@drawable/notification" android:id="@+id/navItem2" android:title="Οι Ανακοινώσεις μου" />
+        <item android:icon="@drawable/profile" android:id="@+id/navItem3" android:title="Το Προφίλ μου" />
+    </group>
+</menu>

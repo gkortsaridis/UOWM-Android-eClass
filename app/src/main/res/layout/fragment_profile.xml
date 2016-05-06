@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/app_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/myprofileimage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/default_profpic" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/myfullname_prof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Full Name"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/myusername_prof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(my username)"
+                    android:layout_below="@+id/myfullname_prof"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Τηλέφωνο" />
+
+                <TextView
+                    android:id="@+id/mytel_prof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0123456789" />
+
+                <View
+                    android:background="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ιδιότητα" />
+
+                <TextView
+                    android:id="@+id/myidiotita_prof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Εκπαιδευόμενος" />
+
+                <View
+                    android:background="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Αριθμός Μητρώου" />
+
+                <TextView
+                    android:id="@+id/myaem_prof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="000" />
+
+                <View
+                    android:background="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Σχετικά με μένα" />
+
+                <TextView
+                    android:id="@+id/myabout_prof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A short bio" />
+
+                <View
+                    android:background="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Στατιστικά" />
+
+                <TextView
+                    android:id="@+id/mystatistika_prof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Statistics" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

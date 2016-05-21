@@ -37,12 +37,12 @@ public class MathimaAnakoinoseisFragment extends Fragment {
     String link;
     ListView listView;
 
-    public MathimaAnakoinoseisFragment(String link, String lesson) {
-        this.link = link;
-        this.lesson = lesson;
+    public MathimaAnakoinoseisFragment() {
     }
 
-    public MathimaAnakoinoseisFragment() {
+    public void setData(String link, String lesson) {
+        this.link = link;
+        this.lesson = lesson;
     }
 
     @Override
@@ -52,7 +52,7 @@ public class MathimaAnakoinoseisFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if(savedInstanceState != null){
             link = savedInstanceState.getString("link");

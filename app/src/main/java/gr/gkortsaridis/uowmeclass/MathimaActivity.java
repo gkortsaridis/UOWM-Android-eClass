@@ -72,10 +72,19 @@ public class MathimaActivity extends AppCompatActivity {
     }
 
     private void setupViewPager(ViewPager viewPager) {
+        MathimaAnakoinoseisFragment anak = new MathimaAnakoinoseisFragment();
+        anak.setData(this.link,this.title);
+
+        MathimaDescriptionFragment descr = new MathimaDescriptionFragment();
+        descr.setData(this.link, this.title, this.kathigitis);
+
+        MathimaEggrafaFragment eggr = new MathimaEggrafaFragment();
+        eggr.setData("https://eclass.uowm.gr/modules/document/?course=" + this.lessonCode);
+
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new MathimaDescriptionFragment(this.link, this.title, this.kathigitis), "ΠΕΡΙΓΡΑΦΗ");
-        adapter.addFragment(new MathimaAnakoinoseisFragment(this.link, this.title), "Ανακοινώσεις");
-        adapter.addFragment(new MathimaEggrafaFragment("https://eclass.uowm.gr/modules/document/?course=" + this.lessonCode), "Έγγραφα");
+        adapter.addFragment(descr, "ΠΕΡΙΓΡΑΦΗ");
+        adapter.addFragment(anak, "Ανακοινώσεις");
+        adapter.addFragment(eggr, "Έγγραφα");
         viewPager.setAdapter(adapter);
     }
 

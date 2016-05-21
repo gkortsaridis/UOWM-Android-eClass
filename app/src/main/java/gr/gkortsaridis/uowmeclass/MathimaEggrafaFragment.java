@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -37,7 +38,7 @@ public class MathimaEggrafaFragment extends Fragment {
     ListView listView;
     ArrayList<String> types;
 
-    public MathimaEggrafaFragment(String link) {
+    public void setData(String link) {
         this.link = link;
     }
 
@@ -115,12 +116,13 @@ public class MathimaEggrafaFragment extends Fragment {
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        //if(types.get(position).contains("fileURL")){
-                        //    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(links.get(position)));
-                        //    startActivity(intent);
-                        //}else {
+                        if(types.get(position).contains("fileURL")){
+                            //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(links.get(position)));
+                            //startActivity(intent);
+                            Toast.makeText(getContext(),"Δεν υποστηρίζεται άνοιγμα αρχείων από την εφραμογή.\nΠαρακαλώ ανοίξτε τα αρχεία από το κουμπί.",Toast.LENGTH_LONG).show();
+                        }else {
                             populateListView(links.get(position), depth);
-                        //}
+                        }
                     }
                 });
                 dialog.dismiss();

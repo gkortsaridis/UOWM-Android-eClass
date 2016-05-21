@@ -30,11 +30,12 @@ public class MathimaDescriptionFragment extends Fragment {
     String teacher;
     TextView teachertv;
 
-    public MathimaDescriptionFragment(String link, String lesson, String teacher) {
+    public void setData(String link, String lesson, String teacher) {
         this.link = link;
         this.lesson = lesson;
         this.teacher = teacher;
     }
+
 
     public MathimaDescriptionFragment() {
     }

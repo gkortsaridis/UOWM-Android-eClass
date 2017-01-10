@@ -2,7 +2,6 @@ package gr.gkortsaridis.uowmeclass;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
@@ -10,16 +9,10 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog.Builder;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.TextView;
-import java.util.concurrent.ExecutionException;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 
 public class LoggedActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
@@ -61,6 +54,8 @@ public class LoggedActivity extends AppCompatActivity {
             ft.replace(R.id.your_placeholder, new AnakoinoseisFragment());
         } else if (what.equals("Το Προφίλ μου")) {
             ft.replace(R.id.your_placeholder, new ProfileFragment());
+        } else if (what.equals("Το Πρόγραμμα μου")) {
+            ft.replace(R.id.your_placeholder, new ProgramFragment());
         }
         ft.commit();
     }
@@ -88,7 +83,7 @@ public class LoggedActivity extends AppCompatActivity {
 
     public void onBackPressed() {
         if (this.drawerLayout == null || !this.drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            new Builder(this).setIcon(R.drawable.uowm_logo_second).setTitle("Έξοδος").setMessage("Θέλετε να κλείσετε την εφαρμογή?").setPositiveButton("Ναι", new OnClickListener() {
+            new Builder(this).setTitle("Έξοδος").setMessage("Θέλετε να κλείσετε την εφαρμογή?").setPositiveButton("Ναι", new OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     Intent intent = new Intent(Intent.ACTION_MAIN);
                     intent.addCategory(Intent.CATEGORY_HOME);

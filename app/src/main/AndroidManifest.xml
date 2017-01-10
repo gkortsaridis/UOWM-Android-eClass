@@ -15,7 +15,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +26,8 @@
         <activity android:name=".LoggedActivity" />
         <activity android:name=".MathimataFragment" />
         <activity android:name=".MathimaActivity" />
-        <activity android:name=".AnakoinosiActivity"></activity>
+        <activity android:name=".AnakoinosiActivity" />
+        <activity android:name=".AddLessonToProgram"></activity>
     </application>
 
 </manifest>

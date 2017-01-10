@@ -4,5 +4,6 @@
         <item android:icon="@drawable/book" android:id="@+id/navItem1" android:title="Τα Μαθήματα μου" />
         <item android:icon="@drawable/notification" android:id="@+id/navItem2" android:title="Οι Ανακοινώσεις μου" />
         <item android:icon="@drawable/profile" android:id="@+id/navItem3" android:title="Το Προφίλ μου" />
+        <item android:icon="@drawable/program" android:id="@+id/navItem4" android:title="Το Πρόγραμμα μου" />
     </group>
 </menu>
